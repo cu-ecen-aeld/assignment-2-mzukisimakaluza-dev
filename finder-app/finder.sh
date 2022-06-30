@@ -10,7 +10,7 @@ else
 
     if [ -d "$filesdir" ]
     then
-        FILES="$(grep -lr ${searchstr} ${filesdir} | wc -l)"
+        FILES="$(grep -lr ${searchstr} ${filesdir} | wc -l)" # Correct
         LINES="$(grep -r ${searchstr} ${filesdir} | wc -l)" # This counts all matching lines [Correct]
         echo "The number of files are ${FILES} and the number of matching lines are ${LINES}"
     else
